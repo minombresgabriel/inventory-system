@@ -1,0 +1,376 @@
+/* Estilos generales con tu paleta */
+:root {
+  --cream: #f2efbb;
+  --orange-light: #d97f30;
+  --orange-dark: #d96f32;
+  --brown: #a67d65;
+  --black: #262626;
+
+  /* Colores funcionales */
+  --primary-color: var(--orange-light);
+  --secondary-color: var(--orange-dark);
+  --accent-color: var(--brown);
+  --dark-color: var(--black);
+  --light-color: var(--cream);
+  --success-color: #4bb543; /* Verde se mantiene para feedback positivo */
+  --danger-color: #e74c3c; /* Rojo ajustado para contraste */
+  --warning-color: #f39c12; /* Amarillo/naranja para advertencias */
+
+  /* Variables de diseño */
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--black);
+}
+
+/* Layout principal */
+.app-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar/Menú vertical - Estilo renovado */
+.sidebar {
+  grid-row: 1 / -1;
+  background-color: var(--black);
+  color: var(--cream);
+  padding: 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.app-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(210, 207, 149, 0.3); /* Cream con transparencia */
+  text-align: center;
+  color: var(--cream);
+}
+
+.sidebar-section {
+  margin-bottom: 1rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--orange-light); /* Naranja claro para títulos */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background-color: var(--brown); /* Café para botones */
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.sidebar-btn:hover {
+  background-color: var(--orange-dark); /* Naranja oscuro al hover */
+  transform: translateY(-2px);
+}
+
+/* Contenido principal */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  background-color: #fafaf5; /* Cream muy claro de fondo */
+}
+
+/* Dashboard/Resumen superior - Tarjetas modernas */
+.dashboard {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background-color: var(--cream);
+  border: 1px solid var(--brown);
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, var(--cream) 0%, #e8e5c0 100%);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--orange-dark);
+  color: var(--black);
+}
+
+.dashboard-card h3 {
+  color: var(--brown);
+  font-size: 0.9rem;
+}
+
+.dashboard-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange-dark);
+}
+
+/* Secciones de lista */
+.product-section,
+.sales-section {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--brown);
+}
+
+/* Títulos de sección */
+h2 {
+  color: var(--orange-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--brown);
+  padding-bottom: 0.5rem;
+}
+
+/* Contenedores con scroll */
+.product-list-container,
+.sales-history-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  max-height: 28vh;
+  overflow-y: auto;
+  border: 1px solid var(--brown);
+}
+
+/* Items de lista */
+.product-item,
+.sale-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--brown);
+  transition: var(--transition);
+}
+
+.product-item:hover,
+.sale-item:hover {
+  background-color: rgba(
+    217,
+    127,
+    48,
+    0.1
+  ); /* Naranja claro muy transparente */
+}
+
+/* Cabeceras de lista */
+.list-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  font-weight: bold;
+  padding: 0.75rem;
+  background-color: var(--cream);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+/* Modales */
+.modal-overlay {
+  background: rgba(38, 38, 38, 0.8); /* Negro semitransparente */
+}
+
+.modal-content {
+  background: var(--cream);
+  border: 2px solid var(--brown);
+  color: var(--black);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brown);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none; /* Menú hamburguesa recomendado para móviles */
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-list-container,
+  .sales-history-container {
+    max-height: 40vh;
+  }
+}
+.chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+/* Estructura principal */
+.main-content {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.product-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 600px; /* Ancho mínimo para que no se comprima demasiado */
+}
+
+.chart-history-container {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+/* Ajustes para el gráfico */
+.chart-container {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--brown);
+  height: 100%;
+  min-height: 500px;
+}
+
+/* Ajustes para el historial de ventas */
+.sales-history {
+  flex: 1;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--brown);
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.sales-scroll-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .product-column,
+  .right-column {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .chart-history-container {
+    flex-direction: column;
+  }
+
+  .chart-container,
+  .sales-history {
+    min-height: 300px;
+  }
+}
+
+/* Estilos para la tarjeta del gráfico */
+/* Contenedor principal del gráfico */
+.chart-card {
+  background: white;
+  border: 1px solid var(--brown);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px; /* Altura mínima aumentada */
+}
+
+/* Contenedor del gráfico */
+.chart-wrapper {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  min-height: 350px; /* Altura mínima para el gráfico */
+}
+
+/* Canvas del gráfico */
+.chart-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.no-data-message {
+  text-align: center;
+  color: var(--brown);
+  padding: 2rem;
+  font-style: italic;
+  margin: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .chart-card {
+    min-height: 300px;
+  }
+
+  .chart-wrapper {
+    min-height: 250px;
+  }
+}

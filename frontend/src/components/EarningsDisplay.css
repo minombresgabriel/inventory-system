@@ -1,0 +1,17 @@
+.earnings-display {
+  position: sticky;
+  top: 20px;
+  right: 20px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.earnings-display h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
