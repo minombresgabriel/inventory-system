@@ -8,9 +8,7 @@
 
 - 📦 Gestión de productos (CRUD)
 - 🧾 Registro de ventas con cálculo de totales
-- 👥 Gestión de usuarios
 - 📊 Dashboard con métricas clave
-- 🔐 Autenticación con control de acceso
 - 💾 Base de datos relacional con MySQL
 - ⚡ UI rápida con React y Vite
 
