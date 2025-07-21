@@ -1,64 +1,64 @@
-# 🛍️ Ananda Shop - Sistema de Inventario y Ventas
+# 🛍️ Ananda Shop - Inventory and Sales System
 
-**Ananda Shop** es una aplicación web completa desarrollada con **React + Vite** para el frontend y **Node.js + Express + MySQL** para el backend. Está diseñada para gestionar el inventario, ventas y usuarios de manera eficiente para negocios pequeños y medianos.
-
----
-
-## 🚀 Características Principales
-
-- 📦 Gestión de productos (CRUD)
-- 🧾 Registro de ventas con cálculo de totales
-- 📊 Dashboard con métricas clave
-- 💾 Base de datos relacional con MySQL
-- ⚡ UI rápida con React y Vite
+**Ananda Shop is a complete web application developed with **React + Vite** for the frontend and **Node.js + Express + MySQL** for the backend. It is designed to manage inventory, sales and users efficiently for small to medium sized businesses.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🚀 Key Features.
+
+- 📦 Product management (CRUD).
+- 🧾 Sales registration with totals calculation.
+- 📊 Dashboard with key metrics.
+- 💾 Relational database with MySQL
+- ⚡ Fast UI with React and Vite
+
+---
+
+## 🛠️ Technologies Used
 
 ### Frontend
 - React
 - Vite
 - React Router
 - Axios
-- Bootstrap / Tailwind (según lo que uses)
+- Bootstrap / Tailwind (depending on what you use)
 
 ### Backend
 - Node.js
 - Express.js
 - MySQL
-- Sequelize o MySQL2 (dependiendo del ORM/conector)
-- JWT para autenticación
+- Sequelize or MySQL2 (depending on ORM/connector)
+- JWT for authentication
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 inventory-system/
-├── frontend/ # Aplicación React + Vite
+├── frontend/ # React + Vite application
 │ ├── src/
-│ └── ...
+│ └└── ...
 ├── backend/ # API Node.js + Express + MySQL
 │ ├── controllers/
 │ ├── routes/
-│ ├── models/
-│ └── ...
-└── README.md
+│ │ ├── models/
+│ └└── ...
+└─── README.md
 
 
 
-## ⚙️ Cómo Ejecutarlo en Local
+## ⚙️ How to Run It Locally
 
-### 1. Clona el repositorio
-```bash
+### 1. Clone the repository
+````bash
 git clone https://github.com/tu-usuario/inventory-system.git
 cd inventory-system
 cd backend
 npm install
-# Crea un archivo .env con tu configuración:
+# Create an .env file with your configuration:
 # DB_HOST=localhost
 # DB_USER=root
-# DB_PASSWORD=tu_contraseña
+# DB_PASSWORD=your_password
 # DB_NAME=ananda_db
 npm run dev
 
@@ -66,10 +66,9 @@ cd ../frontend
 npm install
 npm run dev
 
-✅ Funcionalidades Futuras (en desarrollo)
-📦 Generación de reportes en Excel
-👨‍💻 Autor
-Gabriel Ramírez – @minombresgabriel
+✅ Future functionalities (under development)
+📦 Excel report generation
+👨‍💻 Author
+Gabriel Ramírez - @minombresgabriel
 
-Técnico en informática | Desarrollador MERN & Node.js | Apasionado por soluciones eficientes
-
+IT Technician | MERN & Node.js Developer | Passionate about efficient solutions
